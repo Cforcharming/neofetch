@@ -1,5 +1,6 @@
 The MIT License (MIT)
 
+Copyright (c) 2022 Hanwen Zhang
 Copyright (c) 2015-2021 Dylan Araps
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -3,15 +3,14 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Coding Conventions](#coding-conventions)
-    * [ShellCheck](#shellcheck)
-    * [No no's](#no-nos)
-    * [If Statements](#if-statements)
-    * [Case Statements](#case-statements)
+  * [ShellCheck](#shellcheck)
+  * [No no's](#no-nos)
+  * [If Statements](#if-statements)
+  * [Case Statements](#case-statements)
 * [Making changes to Neofetch](#making-changes-to-neofetch)
-    * [Adding support for a new Operating System / Distribution.](#adding-support-for-a-new-operating-system--distribution)
+  * [Adding support for a new Operating System / Distribution.](#adding-support-for-a-new-operating-system--distribution)
 
 <!-- vim-markdown-toc -->
-
 
 ## Coding Conventions
 
@@ -37,25 +36,23 @@ shellcheck neofetch
 **Note**: If you have trouble installing ShellCheck. You can open a pull
 request on the repo and our Travis.ci hook will run ShellCheck for you.
 
-
 ### No no's
 
 - Don’t use GNU conventions in commands.
-    - Use POSIX arguments and flags.
+  - Use POSIX arguments and flags.
 - Don’t use `cut`.
-    - Use `bash`'s built-in [parameter expansion](http://wiki.bash-hackers.org/syntax/pe).
+  - Use `bash`'s built-in [parameter expansion](http://wiki.bash-hackers.org/syntax/pe).
 - Don’t use `echo`.
-    - Use `printf "%s\n"`
+  - Use `printf "%s\n"`
 - Don’t use `bc`.
 - Don’t use `sed`.
-    - Use `bash`'s built-in [parameter expansion](http://wiki.bash-hackers.org/syntax/pe).
+  - Use `bash`'s built-in [parameter expansion](http://wiki.bash-hackers.org/syntax/pe).
 - Don’t use `cat`.
-    - Use `bash`'s built-in syntax (`file="$(< /path/to/file.txt)")`).
+  - Use `bash`'s built-in syntax (`file="$(< /path/to/file.txt)")`).
 - Don’t use `grep "pattern" | awk '{ printf }'`.
-    - Use `awk '/pattern/ { printf }'`
+  - Use `awk '/pattern/ { printf }'`
 - Don’t use `wc`.
-    - Use `${#var}` or `${#arr[@]}`.
-
+  - Use `${#var}` or `${#arr[@]}`.
 
 ### If Statements
 
@@ -75,7 +72,6 @@ fi
 [[ "$var" ]] && \
     printf "%s\n" "$var"
 ```
-
 
 ### Case Statements
 
@@ -119,8 +115,7 @@ functions then you can make these changes in the `get_*` functions.
 
 - You have to escape back-slashes (`\`). (eg `\\`)
 - You can use `${c1}` to `${c6}`to color the ascii.
-    - These are evaluated *after* we read the file.
-
+  - These are evaluated *after* we read the file.
 
 **Example**:
 
